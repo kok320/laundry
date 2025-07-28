@@ -2,7 +2,7 @@
 include '../koneksi.php';
 
 $id = $_GET['id'];
-$hapus = mysqli_query($koneksi, "DELETE FROM staff WHERE id=$id");
+$hapus = mysqli_query($conn, "DELETE FROM staff WHERE id=$id");
 
 if ($hapus) {
     header("Location: staff.php?hapus=1");
